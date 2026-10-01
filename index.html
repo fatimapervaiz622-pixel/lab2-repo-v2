@@ -42,3 +42,98 @@
 </body>
 
 </html>
+```html
+<!-- Contact -->
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <form id="contact-form">
+
+        <fieldset>
+
+            <legend>Send me a message</legend>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <br><br>
+
+            <label for="topic">Topic</label>
+
+            <select id="topic" name="topic">
+                <option value="general">General</option>
+                <option value="feedback">Feedback</option>
+                <option value="bug">Report a Bug</option>
+            </select>
+
+            <br><br>
+
+            <p>Preferred reply method:</p>
+
+            <label>
+                <input type="radio" name="reply" value="email" checked>
+                Email
+            </label>
+
+            <label>
+                <input type="radio" name="reply" value="phone">
+                Phone
+            </label>
+
+            <br><br>
+
+            <label>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                Subscribe to updates
+            </label>
+
+            <br><br>
+
+            <label for="callback-date">Preferred callback date</label>
+            <input type="date" id="callback-date" name="callback-date">
+
+            <br><br>
+
+            <label for="urgency">
+                Urgency (1 = whenever, 10 = right now)
+            </label>
+
+            <input type="range"
+                   id="urgency"
+                   name="urgency"
+                   min="1"
+                   max="10"
+                   value="5">
+
+            <br><br>
+
+            <label for="message">Message</label>
+
+            <textarea id="message"
+                      name="message"
+                      rows="4"
+                      required
+                      minlength="10"></textarea>
+
+            <br><br>
+
+            <button type="submit">Send</button>
+
+        </fieldset>
+
+    </form>
+
+    <br>
+
+    <button id="clear-btn" type="button">
+        Clear Saved Data
+    </button>
+
+</section>
+```
