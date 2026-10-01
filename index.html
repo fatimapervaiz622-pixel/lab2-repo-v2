@@ -1,66 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sementic Pages</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <h1> Fatima Pervazi</h1>
-            <ul>
-                <a href="#">Home</a>
-                <a href="#">About Me</a>
-                <a href="#">My Skills</a>
-                <a href="#">My Timeline</a>
-                <a href="#">Fun Fact</a>
-                <a href="#">Media</a>
-                <a href="#">Contact</a>
-            </ul>
-        </nav>
-    </header>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Semantic Profile Page</title> 
+</head> 
+<body> 
+    <!-- Task 2.5: Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <main>
-        <article>
-            <h2>About Me</h2>
-            <p>Hello! my name is fatima pervaiz and I am a student of BSCS 5th semester in Qarshi university.</p>
-            <img src="image.jpg" alt="" width="200" height="300">
-        </article>
-        <section>
-            <h2>
-                My skills</h2>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Python</li>
-                    <li>Java</li>
+    <!-- Task 2.2: Header & Nav -->
+    <header> 
+        <h1>Fatima Pervaiz</h1>
+        <nav> 
+            <a href="#about">About Me</a> 
+            <a href="#skills">My Skills</a> 
+            <a href="#timeline">My Timeline</a> 
+            <a href="#fun-fact">Fun Fact</a> 
+            <a href="#media">Media</a> 
+            <a href="#contact">Contact</a> 
+        </nav> 
+    </header> 
 
-                </ul>
+    <!-- Task 2.3 & 2.5: Main Section -->
+    <main id="main-content"> 
+        <!-- Task 3.1 & 3.5: About Section & Blockquote -->
+        <article id="about"> 
+            <h2>About Me</h2> 
+            <p>Hello! my name is fatima pervaiz and I am a student of BSCS 5th semester in Qarshi university.</p> 
+            <figure>
+                <img src="image.jpg" alt="Photo of Fatima Pervaiz" width="200" height="300"> 
+                <figcaption>That's me!</figcaption>
+            </figure>
+            <blockquote>
+                <p>"The best way to learn is by building."</p>
+            </blockquote>
+        </article> 
+
+        <!-- Task 3.2: Skills Section -->
+        <section id="skills"> 
+            <h2>My Skills</h2> 
+            <ul> 
+                <li>HTML</li> 
+                <li>CSS</li> 
+                <li>Python</li> 
+                <li>Java</li> 
+            </ul> 
+        </section> 
+
+        <!-- Task 3.3: Timeline Section -->
+        <section id="timeline">
+            <h2>My Timeline</h2>
+            <ol>
+                <li>Completed Lab 1: set up my environment and pushed to GitHub</li>
+                <li>Built my first static webpage</li>
+                <li>Started this semantic HTML5 profile page</li>
+            </ol>
         </section>
-    </main>
-</body>
 
+        <!-- Task 3.4: Fun Fact Aside -->
+        <aside id="fun-fact">
+            <h2>Fun Fact</h2>
+            <p>I love learning new web technologies and solving coding challenges!</p>
+        </aside>
+
+        <!-- Task 4: Media Section -->
+        <section id="media">
+            <h2>A Short Clip</h2>
+            <video controls width="480">
+                <source src="intro.webm" type="video/webm">
+                <source src="intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p><strong>Transcript summary:</strong> A 30-second introduction where I talk about why I'm taking this course.</p>
+        </section>
+
+        <!-- Task 5: Accessible Contact Form -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <fieldset>
+                    <legend>Send me a message</legend>
+                    
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic">
+                        <option value="general">General</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="bug">Report a Bug</option>
+                    </select><br><br>
+
+                    <p>Preferred reply method:</p>
+                    <label><input type="radio" name="reply" value="email" checked> Email</label>
+                    <label><input type="radio" name="reply" value="phone"> Phone</label><br><br>
+
+                    <label><input type="checkbox" id="subscribe" name="subscribe"> Subscribe to updates</label><br><br>
+
+                    <label for="callback-date">Preferred callback date</label>
+                    <input type="date" id="callback-date" name="callback-date"><br><br>
+
+                    <label for="urgency">Urgency (1 = whenever, 10 = right now)</label>
+                    <input type="range" id="urgency" name="urgency" min="1" max="10" value="5"><br><br>
+
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" rows="4" required minlength="10"></textarea><br><br>
+
+                    <button type="submit">Send</button>
+                </fieldset>
+            </form>
+            <br>
+            <!-- Task 6.8: Clear Button -->
+            <button id="clear-btn" type="button">Clear Saved Data</button>
+        </section>
+    </main> 
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Fatima Pervaiz. All rights reserved.</p>
+    </footer>
+
+    <!-- Task 6.1: Script Link -->
+    <script src="script.js"></script>
+</body> 
 </html>
-```html
-<!-- Media -->
-<section id="media">
-
-    <h2>A Short Clip</h2>
-
-    <video controls width="480">
-
-        <source src="intro.webm" type="video/webm">
-        <source src="intro.mp4" type="video/mp4">
-
-        Your browser does not support the video tag.
-
-    </video>
-
-    <p>
-        <strong>Transcript summary:</strong>
-        A 30-second introduction where I talk about why I'm taking this course.
-    </p>
-
-</section>
-```
